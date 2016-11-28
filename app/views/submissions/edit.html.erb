@@ -30,6 +30,15 @@
         <%= select_tag(:survey_id, options_from_collection_for_select(Survey.all, :id, :question_text, @submission.survey_id), :class => "form-control") %>
       </div>
 
+      <!-- Label and input for selection -->
+      <div class="form-group">
+        <label for="selection" class="control-label">
+          Selection
+        </label>
+
+        <input type="text" id="selection" name="selection" placeholder="Selection" class="form-control" value="<%= @submission.selection %>">
+      </div>
+
       <button class="btn btn-warning">
         Update Submission
       </button>

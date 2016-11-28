@@ -33,6 +33,8 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new
 
     @restaurant.user_id = params[:user_id]
+    @restaurant.name = params[:name]
+    @restaurant.address = params[:address]
 
     save_status = @restaurant.save
 
@@ -60,6 +62,8 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
 
     @restaurant.user_id = params[:user_id]
+    @restaurant.name = params[:name]
+    @restaurant.address = params[:address]
 
     save_status = @restaurant.save
 

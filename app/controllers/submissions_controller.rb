@@ -33,6 +33,7 @@ class SubmissionsController < ApplicationController
 
     @submission.user_id = params[:user_id]
     @submission.survey_id = params[:survey_id]
+    @submission.selection = params[:selection]
 
     save_status = @submission.save
 
@@ -61,6 +62,7 @@ class SubmissionsController < ApplicationController
 
     @submission.user_id = params[:user_id]
     @submission.survey_id = params[:survey_id]
+    @submission.selection = params[:selection]
 
     save_status = @submission.save
 

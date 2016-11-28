@@ -1,6 +1,6 @@
 ActiveAdmin.register Submission do
 
- permit_params :user_id, :survey_id
+ permit_params :user_id, :survey_id, :selection
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

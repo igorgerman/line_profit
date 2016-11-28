@@ -78,6 +78,15 @@
       <!-- Label and input for survey_id -->
       <input type="hidden" name="survey_id" value="<%= @survey.id %>">
 
+      <!-- Label and input for selection -->
+      <div class="form-group">
+        <label for="selection" class="control-label">
+          Selection
+        </label>
+
+        <input type="text" id="selection" name="selection" placeholder="Selection" class="form-control" value="">
+      </div>
+
       <button class="btn btn-block btn-success">
         Create Submission
       </button>
