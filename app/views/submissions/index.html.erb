@@ -16,8 +16,20 @@
 
       <% @submissions.each do |submission| %>
       <tr>
-        <td><%= submission.user.email %></td>
-        <td><%= submission.survey.question_text %></td>
+        <td>
+          <% if submission.user.present? %>
+            <a href="/users/<%= submission.user.id %>">
+              <%= submission.user.email %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if submission.survey.present? %>
+            <a href="/surveys/<%= submission.survey.id %>">
+              <%= submission.survey.question_text %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/submissions/<%= submission.id %>" class="btn btn-primary">Show</a>
           

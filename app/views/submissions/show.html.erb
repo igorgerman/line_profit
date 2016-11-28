@@ -6,10 +6,22 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>User</dt>
-      <dd><%= @submission.user_id %></dd>
+      <dd>
+        <% if @submission.user.present? %>
+          <a href="/users/<%= @submission.user_id %>">
+            <%= @submission.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Survey</dt>
-      <dd><%= @submission.survey_id %></dd>
+      <dd>
+        <% if @submission.survey.present? %>
+          <a href="/surveys/<%= @submission.survey_id %>">
+            <%= @submission.survey.question_text %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

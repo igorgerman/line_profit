@@ -15,7 +15,13 @@
       <dd><%= @survey.option2 %></dd>
 
       <dt>Restaurant</dt>
-      <dd><%= @survey.restaurant_id %></dd>
+      <dd>
+        <% if @survey.restaurant.present? %>
+          <a href="/restaurants/<%= @survey.restaurant_id %>">
+            <%= @survey.restaurant.created_at %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
