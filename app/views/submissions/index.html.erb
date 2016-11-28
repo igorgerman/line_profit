@@ -9,6 +9,11 @@
       <p class="lead">Narrow results:</p>
 
         <div class="form-group">
+    <%= f.label :selection_cont, "Selection contains" %>
+    <%= f.text_field :selection_cont, :class => "form-control", :placeholder => "Selection contains" %>
+  </div>
+
+<div class="form-group">
           <%= f.label :created_at, "Created at" %>
           <div class="row">
             <div class='col-md-6 mb-1'>
@@ -74,6 +79,7 @@
       <tr>
         <th>User</th>
         <th>Survey</th>
+        <th>Selection</th>
         <th>Actions</th>
       </tr>
 
@@ -93,6 +99,7 @@
             </a>
           <% end %>
         </td>
+        <td><%= submission.selection %></td>
         <td>
           <a href="/submissions/<%= submission.id %>" class="btn btn-primary">Show</a>
           
