@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "surveys#index"
   # Routes for the Submission resource:
   # CREATE
   get "/submissions/new", :controller => "submissions", :action => "new"
