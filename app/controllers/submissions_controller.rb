@@ -1,5 +1,5 @@
 class SubmissionsController < ApplicationController
-  before_action :current_user_must_be_submission_user, :only => [:edit, :update, :destroy]
+  before_action :current_user_must_be_submission_user, :only => [:show, :edit, :update, :destroy]
 
   def current_user_must_be_submission_user
     submission = Submission.find(params[:id])
