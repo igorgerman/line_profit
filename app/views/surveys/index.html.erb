@@ -21,7 +21,7 @@
         <td><%= survey.question_text %></td>
         <td><%= survey.option1 %></td>
         <td><%= survey.option2 %></td>
-        <td><%= survey.restaurant_id %></td>
+        <td><%= survey.restaurant.created_at %></td>
         <td>
           <a href="/surveys/<%= survey.id %>" class="btn btn-primary">Show</a>
           <a href="/surveys/<%= survey.id %>/edit" class="btn btn-warning">Edit</a>
