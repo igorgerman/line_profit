@@ -53,6 +53,47 @@
           </div>
         </li>
       <% end %>
+
+      <li class="list-group-item">
+        <form action="/create_survey" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for question_text -->
+      <div class="form-group">
+        <label for="question_text" class="control-label">
+          Question text
+        </label>
+
+        <textarea id="question_text" name="question_text" placeholder="Question text" class="form-control" rows="3"></textarea>
+      </div>
+
+      <!-- Label and input for option1 -->
+      <div class="form-group">
+        <label for="option1" class="control-label">
+          Option1
+        </label>
+
+        <input type="text" id="option1" name="option1" placeholder="Option1" class="form-control" value="">
+      </div>
+
+      <!-- Label and input for option2 -->
+      <div class="form-group">
+        <label for="option2" class="control-label">
+          Option2
+        </label>
+
+        <input type="text" id="option2" name="option2" placeholder="Option2" class="form-control" value="">
+      </div>
+
+      <!-- Label and input for restaurant_id -->
+      <input type="hidden" name="restaurant_id" value="<%= @restaurant.id %>">
+
+      <button class="btn btn-block btn-success">
+        Create Survey
+      </button>
+    </form>
+      </li>
     </ul>
   </div>
 </div>

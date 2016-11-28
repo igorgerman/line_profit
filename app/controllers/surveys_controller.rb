@@ -6,6 +6,7 @@ class SurveysController < ApplicationController
   end
 
   def show
+    @submission = Submission.new
     @survey = Survey.find(params[:id])
 
     render("surveys/show.html.erb")
