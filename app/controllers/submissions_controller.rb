@@ -10,7 +10,7 @@ class SubmissionsController < ApplicationController
   end
 
   def index
-    @submissions = Submission.all
+    @submissions = current_user.submissions.page(params[:page]).per(10)
 
     render("submissions/index.html.erb")
   end
