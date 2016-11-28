@@ -8,6 +8,10 @@ class Survey < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :completed_submissions,
+             :through => :submissions,
+             :source => :user
+
   # Validations
 
 end

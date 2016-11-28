@@ -9,6 +9,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :completed_surveys,
+             :through => :submissions,
+             :source => :survey
+
   # Validations
 
   validates :username, :uniqueness => true
