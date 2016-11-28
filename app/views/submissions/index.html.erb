@@ -16,7 +16,7 @@
 
       <% @submissions.each do |submission| %>
       <tr>
-        <td><%= submission.user_id %></td>
+        <td><%= submission.user.email %></td>
         <td><%= submission.survey_id %></td>
         <td>
           <a href="/submissions/<%= submission.id %>" class="btn btn-primary">Show</a>
